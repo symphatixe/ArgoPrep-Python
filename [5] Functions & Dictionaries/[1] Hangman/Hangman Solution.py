@@ -1,20 +1,15 @@
 # Starter Code
 import random
-import hangman_words as words
-# from hangman_words import word_list
-import hangman_art as art
-# from hangman_art import stages
-
-
-
-print("Welcome to Hangman")
+from hangman_words import word_list
+from hangman_art import stages
 
 
 # Write your code below!
+
+
 game_end = False
 lives = 7
-
-choice = random.choice(words.word_list).lower()
+choice = random.choice(word_list).lower()
 
 
 display = []
@@ -25,7 +20,7 @@ guesses = []
 
 while not game_end:
     print(f"The word to guess is {' '.join(display)}\n")
-    guess = input("Guess a letter\n")
+    guess = input("Guess a letter\n").lower()
 
     if guess not in guesses:
         guesses.append(guess)
@@ -43,7 +38,8 @@ while not game_end:
         print(f"Guessed letters: {guesses}")
         print(f"You have already tried {guess}, you have {lives} lives left.")
 
-    print(art.stages[lives - 1])
+    print(stages[lives - 1])
+
 
     if lives == 0:
         game_end = True

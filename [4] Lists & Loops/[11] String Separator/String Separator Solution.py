@@ -1,11 +1,13 @@
 # Starter Code
 entry = input("Enter some text\n")
-list1 = []
+letter_list = []
 
 
 # Write your code below!
+
+
 for letter in entry:
-    list1.append(letter)
+    letter_list.append(letter)
 
 print(f"User Input: {entry}")
-print(f"Separated List: {list1}")
+print(f"Separated List: {letter_list}")

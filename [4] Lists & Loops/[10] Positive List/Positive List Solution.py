@@ -1,16 +1,18 @@
 # Starter Code
 import random
 
-list1 = []
-list2 = []
+positive_list = []
+negative_list = []
 
 
 # Write your code below!
+
+
 for _ in range(35):
     number = random.randint(-20, 20)
-    list1.append(number)
 
-    if (number >= 0): list2.append(number)
+    if (number >= 0): positive_list.append(number)
+    else: negative_list.append(number)
 
-print(f"Full list: {list1}")
-print(f"Positive list: {list2}")
+print(f"Positive list: {positive_list}")
+print(f"Negative list: {negative_list}")
